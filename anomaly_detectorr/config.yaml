@@ -1,0 +1,16 @@
+# Reputation service configuration
+reputation_services:
+  abuseipdb:
+    enabled: true                     # Enable AbuseIPDB reputation checks
+    api_key: "44b6b9f85fa5748fa37d6a85c032eab62fefd2f317bbb6bd859f5a6b845e3ae8e85ae993e6c453b8"
+    timeout: 5                        # Timeout for API requests (in seconds)
+
+# Detection thresholds
+thresholds:
+  data_spike_kb: 500                 # Alert if outbound data to a single IP exceeds this threshold
+  suspicious_dns_keywords:          # Keywords to flag in DNS queries
+    - update
+    - track
+    - beacon
+    - telemetry
+    - malware
